@@ -1,3 +1,21 @@
+@mixin flex-display($display, $flex-direction) {
+    display: $display;
+    flex-direction: $flex-direction;
+}
+
+@mixin border-style($border, $border-width, $border-radius, $border-color) {
+    border: $border;
+    border-width: $border-width;
+    border-radius: $border-radius;
+    border-color: $border-color;
+}
+
+@mixin position($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
 body {
     background-image: url(../images/green-felt-background.jpeg);
     background-repeat: no-repeat;
@@ -10,8 +28,7 @@ header {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    @include flex-display(flex, column);
     align-items: center;
 }
 
@@ -20,10 +37,7 @@ h2 {
 }
 
 #red-die {
-    border: solid;
-    border-radius: 5px;
-    border-width: 5px;
-    border-color: yellow;
+    @include border-style(solid, 5px, 5px, yellow);
 }
 
 #blue-die {
@@ -31,24 +45,20 @@ h2 {
 }
 
 #game-panels {
-    display: flex;
-    flex-direction: row;
+    @include flex-display(flex, row);
     justify-content: space-between;
 }
 
 .dice-panel {
-    display: flex;
-    flex-direction: column;
+    @include flex-display(flex, column);
     align-items: center;
-    border: solid 5px;
-    border-radius: 10px;
+    @include border-style(solid, 5px, 10px, black);
     padding: 10px;
     background-color: whitesmoke;
 }
 
 .dice {
-    display: flex;
-    flex-direction: row;
+    @include flex-display(flex, row);
     justify-content: space-between;
 }
 
@@ -57,33 +67,27 @@ h2 {
 }
 
 .scores {
-    display: flex;
-    flex-direction: row;
+    @include flex-display(flex, row);
     justify-content: space-around;
 }
 
 .score-section {
-    display: flex;
-    flex-direction: column;
+    @include flex-display(flex, column);
     align-items: center;
 }
 
 #game-controls {
-    display: flex;
-    flex-direction: row;
+    @include flex-display(flex, row);
     justify-content: center;
 }
 
 .text-header {
-    display: flex;
-    flex-direction: row;
+    @include flex-display(flex, row);
     justify-content: space-between;
 }
 
 #result-pop-up {
-    position:fixed;
-    top:0px;
-    left:0px;    
+    @include position(fixed, 0, 0);
     height: 100vh;
     width: 100vw;
     z-index: 1000;
@@ -92,12 +96,9 @@ h2 {
 }
 
 #pop-up-box {
-    position:absolute;
-	left:50%;
-	top:50%;
+    @include position(absolute, 50%, 50%);
 	transform:translate(-50%, -50%);
     padding:10px;
-    border: solid;
+    @include border-style(solid, 5px, 10px, black);
     background-color: whitesmoke;
-	border-radius:10px;
 }
