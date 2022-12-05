@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="../scripts/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../styles/index.css">
+    <title>COMP 2132 Project: Dice Game</title>
+</head>
+<body>
+    <header>
+        <h1>Dice Game</h1>
+    </header>
+    <main>
+        <section id="dice-selection">
+            <h2>Pick a Dice Colour</h2>
+            <div id="dice-colors">
+                <img class="dice-img" id="red-die" src="../images/red-dice-5.png" alt="">
+                <img class="dice-img" id="blue-die" src="../images/blue-dice-5.png" alt="">
+            </div>
+        </section>
+        <section id="dice-game">
+            <h2 id="round-counter">Round 1</h2>
+            <div id="game-panels">
+                <div class="dice-panel" id="player-panel">
+                    <h2>You</h2>
+                    <div class="dice" id="player-dice">
+                        <img class="dice-img" id="player-dice-1" src="../images/red-dice-1.png" alt="">
+                        <img class="dice-img" id="player-dice-2" src="../images/red-dice-1.png" alt="">
+                    </div>
+                    <div class="score-section">
+                        <h3>Your Score</h3>
+                        <div class="scores" id="player-scores">
+                            <div class="round-score">
+                                <b>Round Score</b>
+                                <p id="player-round-score">0</p>
+                            </div>
+                            <div class="total-score">
+                                 <b>Total Score</b>
+                                 <p id="player-total-score">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dice-panel" id="computer-panel">
+                    <h2>Computer</h2>
+                    <div class="dice" id="computer-dice">
+                        <img class="dice-img" id="computer-dice-1" src="../images/blue-dice-1.png" alt="">
+                        <img class="dice-img" id="computer-dice-2" src="../images/blue-dice-1.png" alt="">
+                    </div>
+                    <div class="score-section">
+                        <h3>Computer's Score</h3>
+                        <div class="scores" id="computer-scores">
+                            <div class="round-score">
+                                <b>Round Score</b>
+                                <p id="computer-round-score">0</p>
+                            </div>
+                            <div class="total-score">
+                                <b>Total Score</b>
+                                <p id="computer-total-score">0</p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="game-controls">
+                <button id="new-game">New Game</button>
+                <button id="roll-dice">Roll Dice</button>
+            </div>
+        </section>
+        <section id="text-tips">
+            <div id="how-to-play">
+                <div class="text-header" id="how-to-play-header">
+                    <b>How To Play:</b>
+                </div>
+                <ul id="how-to-play-list">
+                    <li>Click "Roll Dice" to start the first round.</li>
+                    <li>Click "Roll Dice" again to play the second round.</li>
+                    <li>The game ends after three rounds.</li>
+                    <li>Click "New Game" to play again.</li>
+                </ul>
+            </div>
+            <div id="rules">
+                <div class="text-header" id="rules-header">
+                    <b>Rules:</b>
+                </div>
+                <ul id="rules-list">
+                    <li>You will be playing against the computer.</li>
+                    <li>Each round, both players roll their dice.</li>
+                    <li>The score of each player is tallied after a round.</li>
+                    <li>After three rounds, the player with the highest total score wins.</li>
+                    <li>If a player rolls a 1, their score for that round is 0.</li>
+                    <li>If a player rolls a pair, their score for that round is double the sum of the pair (e.g. 3 & 3 is 2(3 + 3) = 12)</li>
+                    <li>Otherwise, the player's score for that round is the sum of their rolls.</li>
+                </ul>
+            </div>
+        </section>
+        <section id='result-pop-up' hidden>
+            <div id="pop-up-box">
+                <h2 id="result"></h2>
+                <p id="player-final-score"></p>
+                <p id="computer-final-score"></p>
+                <p id="result-msg"></p>	
+                <button id="close-pop-up">Close</button>
+            </div>
+        </section>  
+    </main>
+</body>
+</html>
