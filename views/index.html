@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>Lucky Dice</h1>
-        <b>Mini Dice Game by Nicholas Chan</b>
+        <b id="author">Mini Dice Game by Nicholas Chan</b>
     </header>
     <main>
         <section id="dice-selection">
@@ -23,7 +23,6 @@
             </div>
         </section>
         <section id="dice-game">
-            <h2 id="round-counter">Round 1</h2>
             <div id="game-panels">
                 <div class="dice-panel" id="player-panel">
                     <h2>You</h2>
@@ -44,6 +43,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id="round-counter-div">
+                    <h2 id="round-counter">Round 1</h2>
                 </div>
                 <div class="dice-panel" id="computer-panel">
                     <h2>Computer</h2>
@@ -67,14 +69,15 @@
                 </div>
             </div>
             <div id="game-controls">
-                <button id="new-game">New Game</button>
-                <button id="roll-dice">Roll Dice</button>
+                <button id="new-game"><b>New Game</b></button>
+                <button id="roll-dice"><b>Roll Dice</b></button>
             </div>
         </section>
         <section id="text-tips">
             <div id="how-to-play">
                 <div class="text-header" id="how-to-play-header">
                     <b>How To Play:</b>
+                    <!-- <button id="show-how-to-play">Show +</button> -->
                 </div>
                 <ul id="how-to-play-list">
                     <li>Click "Roll Dice" to start the first round.</li>
@@ -86,6 +89,7 @@
             <div id="rules">
                 <div class="text-header" id="rules-header">
                     <b>Rules:</b>
+                    <!-- <button id="show-rules">Show +</button> -->
                 </div>
                 <ul id="rules-list">
                     <li>You will be playing against the computer.</li>
