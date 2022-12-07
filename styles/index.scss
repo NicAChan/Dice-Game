@@ -80,6 +80,7 @@ b {
 #dice-game {
     @include flex-display(flex, column);
     align-items: center;
+    min-width: 600px;
 }
 
 #game-panels {
@@ -147,6 +148,7 @@ b {
     @include flex-display(flex, row);
     justify-content: space-around;
     width: 65%;
+    min-width: 600px;
 }
 
 .text-header {
