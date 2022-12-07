@@ -146,7 +146,7 @@ b {
 #text-tips {
     @include flex-display(flex, row);
     justify-content: space-around;
-    width: 80%;
+    width: 65%;
 }
 
 .text-header {
@@ -178,9 +178,22 @@ b {
 }
 
 #pop-up-box {
+    @include flex-display(flex, column);
+    align-items: center;
     @include position(absolute, 50%, 50%);
 	transform:translate(-50%, -50%);
     padding:10px;
-    @include border-style(solid, 5px, 10px, $red);
-    background-color: $white;
+    @include border-style(solid, 5px, 10px, $black);
+    background-color: $yellow;
+    width: 25%
+}
+
+#pop-up-box > p {
+    width: 100%;
+}
+
+#close-pop-up {
+    @include border-style(solid, 3px, 5px, $red);
+    padding: 5px;
+    width: 50%;   
 }

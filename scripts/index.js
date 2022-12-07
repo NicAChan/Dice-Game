@@ -102,18 +102,18 @@ $("#roll-dice").click(() => {
         if (round == 3) {
             $("#roll-dice").prop("disabled", true)
 
-            $("#player-final-score").html(`Player Score: ${player1.totalScore}`)
-            $("#computer-final-score").html(`Computer Score: ${computer.totalScore}`)
+            $("#player-final-score").html(`<b>Player Score: ${player1.totalScore}</b>`)
+            $("#computer-final-score").html(`<b>Computer Score: ${computer.totalScore}</b>`)
 
             if (player1.totalScore > computer.totalScore) {
                 $("#result").html("You Win")
-                $("#result-msg").html("Congrats, luck was on your side!")
+                $("#result-msg").html("<b>Congrats, luck was on your side!</b>")
             } else if (player1.totalScore < computer.totalScore) {
                 $("#result").html("You Lose")
-                $("#result-msg").html("Better luck next time!")
+                $("#result-msg").html("<b>Better luck next time!</b>")
             } else {
                 $("#result").html("Tie")
-                $("#result-msg").html("The luck was shared evenly!")
+                $("#result-msg").html("<b>The luck was shared evenly!</b>")
             }
 
             setTimeout(() => {
